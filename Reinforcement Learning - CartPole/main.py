@@ -1,13 +1,19 @@
-import gym  # pip install gym
+import gym  # install gym 0.25.2
 import numpy as np
 
+# install tensorflow version 2.12.0
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Flatten
 from tensorflow.keras.optimizers.legacy import Adam
 
+# install keras.rl version 1.5.0
 from rl.agents import DQNAgent  # pip install keras-rl2
-from rl.policy import BoltzmannQPolicy  # important to have gym==0.25.2
+from rl.policy import BoltzmannQPolicy
 from rl.memory import SequentialMemory
+
+# additional imports:
+# protobuf
+# pygame to display the visualisation
 
 env = gym.make("CartPole-v1")  # no render mode to prevent display while training
 
