@@ -13,6 +13,7 @@ from rl.memory import SequentialMemory
 
 # additional imports:
 # protobuf
+# pyglet
 # pygame to display the visualisation
 
 env = gym.make("CartPole-v1")  # no render mode to prevent display while training
