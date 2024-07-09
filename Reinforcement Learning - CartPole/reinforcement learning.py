@@ -17,7 +17,7 @@ from rl.memory import SequentialMemory
 # pygame to display the visualisation
 
 env = gym.make("CartPole-v1")  # no render mode to prevent display while training
-# when you add this line rendermode = 'human', then you can see the training
+# when you add this line mode = 'human', then you can see the training
 
 states = env.observation_space.shape[0]
 actions = env.action_space.n
