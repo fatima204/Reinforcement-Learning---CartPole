@@ -1,5 +1,9 @@
 import random
-import gym  # pip install gym==0.25.2
+import gym  # version 0.25.2
+
+# additional imports
+# pyglet
+# pygame
 
 env = gym.make("CartPole-v1", render_mode="human")
 
@@ -9,11 +13,11 @@ for episode in range(1, episodes+1):
     done = False
     score = 0
 
-    while not done:  # try alternatively while True to see full fail
+    while not done:  # when entering True, then you see how the cart fails completely
         action = random.choice([0, 1])
-        n_state, reward, done, info = env.step(action)  # in newer version five arguments (truncated between done and info)
+        n_state, reward, done, info = env.step(action)
         score += reward
-        env.render()  # need pip install pyglet
+        env.render() 
 
     print(f"Episode; {episode} Score: {score}")
 
